@@ -101,7 +101,7 @@ from split_genre
 select genre,year_category as year,count(genre) as count from genre_category group by genre,year_category having genre ='Western' order by year;
 
 #Insights 
-# 1. After 1990s, drama popularity got increased double the times.
+# 1. After 1990s, drama popularity got increased double the times. It was the most popular one.
 # 2. Animation first film was got released after 1980s. This was new genre getting somewhat popular.
 # 3. Only one Biography film was released in 1920s ,them no Biography film was released between 1930s,1940s,1950s,ie) over 30 years. Then only biography film trend was increasing.
 # 4. There is up and down trend in Crime genre, ie 1950s increase,1960s decrease,again 1970s increase,1980s decreases. 
