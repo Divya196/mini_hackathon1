@@ -19,17 +19,18 @@ select genre, released_year from imdb;
 #CTE to split genres 
 with split_genre as (
 select 
-    TRIM(SUBSTRING_INDEX(SUBSTRING_INDEX(genre, ',', 1), ',', -1)) AS Genre,
+#trim is used to eliminate spaces
+    trim(SUBSTRING_INDEX(SUBSTRING_INDEX(genre, ',', 1), ',', -1)) as Genre,
     released_year
 from imdb
-union all
+union
 select 
-    TRIM(SUBSTRING_INDEX(SUBSTRING_INDEX(genre, ',', 2), ',', -1)) AS Genre,
+    trim(SUBSTRING_INDEX(SUBSTRING_INDEX(genre, ',', 2), ',', -1)) as Genre,
     released_year
 from imdb
-union all
+union 
 select 
-    TRIM(SUBSTRING_INDEX(SUBSTRING_INDEX(genre, ',', 3), ',', -1)) AS Genre,
+    trim(SUBSTRING_INDEX(SUBSTRING_INDEX(genre, ',', 3), ',', -1)) as Genre,
     released_year
 from imdb
 ),
@@ -51,7 +52,8 @@ end as year_category
 from split_genre
 )
 
-#select count(*) from split_genre;
+#select count(*) from split_genre; 
+#After spliting the words, 1144 records there in genre column
 #List of genre
 #select distinct(genre) from split_genre order by genre;
 #| genre       |
