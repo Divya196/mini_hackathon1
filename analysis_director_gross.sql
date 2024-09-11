@@ -24,10 +24,10 @@ select director,series_title,gross from imdb order by gross desc limit 10;
 #Anthony Russo	    |Avengers: Endgame	                        |858373000
 #James Cameron	    |Avatar	                                    |760507625
 #Anthony Russo	    |Avengers: Infinity War	                    |678815482
-#James Cameron	    |Titanic	                                |659325379
-#Joss Whedon	    |The Avengers	                            |623279547
+#James Cameron	    |Titanic	                                  |659325379
+#Joss Whedon	      |The Avengers	                              |623279547
 #Brad Bird	        |Incredibles 2	                            |608581744
-#Christopher Nolan	|The Dark Knight	                        |534858444
+#Christopher Nolan	|The Dark Knight	                          |534858444
 #Gareth Edwards	    |Rogue One	                                |532177324
 #Christopher Nolan	|The Dark Knight Rises	                    |448139099
 select series_title,released_year,director,gross,imdb_rating from imdb where director like '%J.J. Abrams%' order by gross desc;
