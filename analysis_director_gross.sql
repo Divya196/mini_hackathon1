@@ -20,7 +20,7 @@ select series_title,director,gross,imdb_rating from imdb where director = 'Marti
 
 #directors that got the highest gross
 select director,series_title,gross from imdb order by gross desc limit 10;
-#J.J. Abrams	    |Star Wars: Episode VII - The Force Awakens	|936662225
+#J.J. Abrams	      |Star Wars: Episode VII - The Force Awakens	|936662225
 #Anthony Russo	    |Avengers: Endgame	                        |858373000
 #James Cameron	    |Avatar	                                    |760507625
 #Anthony Russo	    |Avengers: Infinity War	                    |678815482
